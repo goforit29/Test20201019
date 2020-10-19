@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Request" />
+        <module name="Payment" />
+        <module name="boot-camp-gateway" />
+        <module name="Delivery" />
+        <module name="StatusBoard" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="boot-camp-gateway" target="1.8" />
+      <module name="Delivery" target="1.8" />
+      <module name="Payment" target="1.8" />
+      <module name="Request" target="1.8" />
+      <module name="StatusBoard" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Delivery" options="-parameters" />
+      <module name="Payment" options="-parameters" />
+      <module name="Request" options="-parameters" />
+      <module name="StatusBoard" options="-parameters" />
+      <module name="boot-camp-gateway" options="-parameters" />
+    </option>
+  </component>
+</project>

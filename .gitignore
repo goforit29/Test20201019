@@ -1,0 +1,4 @@
+# Project exclude paths
+/Delivery/target/
+/Payment/target/
+/Request/target/

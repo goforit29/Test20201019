@@ -1,0 +1,74 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: Request
+          uri: http://localhost:8081
+          predicates:
+            - Path=/requests/** 
+        - id: Delivery
+          uri: http://localhost:8082
+          predicates:
+            - Path=/deliveries/** 
+        - id: Payment
+          uri: http://localhost:8083
+          predicates:
+            - Path=/payments/** 
+        - id: StatusBoard
+          uri: http://localhost:8084
+          predicates:
+            - Path= /statusBoards/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: Request
+          uri: http://Request:8080
+          predicates:
+            - Path=/requests/** 
+        - id: Delivery
+          uri: http://Delivery:8080
+          predicates:
+            - Path=/deliveries/** 
+        - id: Payment
+          uri: http://Payment:8080
+          predicates:
+            - Path=/payments/** 
+        - id: StatusBoard
+          uri: http://StatusBoard:8080
+          predicates:
+            - Path= /statusBoards/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
