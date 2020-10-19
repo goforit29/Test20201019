@@ -26,12 +26,19 @@ public class PolicyHandler{
 
         if(paid.isMe()){
             //System.out.println("##### listener CreateDelivery : " + paid.toJson());
-            Optional<Delivery> deliveryOptional = deliveryRepository.findById(paid.getId());
-            Delivery delivery = deliveryOptional.get();
+            //Optional<Delivery> deliveryOptional = deliveryRepository.findById(paid.getRequestId());
+            //Delivery delivery = deliveryOptional.get();
+            //delivery.setRequestId(paid.getRequestId());
+            //delivery.setStatus("BeforeChecked");
+            Delivery delivery = new Delivery();
             delivery.setRequestId(paid.getRequestId());
             delivery.setStatus("BeforeChecked");
 
             deliveryRepository.save(delivery);
+
+
+
+
         }
     }
 

@@ -25,7 +25,7 @@ public class Payment {
     }
 
     @PrePersist
-    public void onPrePersist(){
+    public void onPostUpdate(){
         Paycanceld paycanceld = new Paycanceld();
         BeanUtils.copyProperties(this, paycanceld);
         paycanceld.publishAfterCommit();

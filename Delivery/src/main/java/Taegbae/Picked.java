@@ -4,7 +4,7 @@ public class Picked extends AbstractEvent {
 
     private Long id;
     private Long requestId;
-    private String status;
+    private String status ="Picked";
     private String courierName;
 
     public Long getId() {

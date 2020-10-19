@@ -28,7 +28,8 @@ public class PolicyHandler{
                 //System.out.println("##### listener Cancel : " + paycanceld.toJson());
                 Optional<Request> requestOptional = RequestRepositroty.findById(paycanceld.getId());
                 Request request = requestOptional.get();
-                request.setStatus(paycanceld.getStatus());
+                request.setId(paycanceld.getRequestId());
+                request.setStatus("PayCanceled");
                 RequestRepositroty.save(request);
 
 

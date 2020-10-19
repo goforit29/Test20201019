@@ -3,6 +3,9 @@ package Taegbae;
 public class Paycanceld extends AbstractEvent {
 
     private Long id;
+
+
+
     private Long requestId;
     private Long customerId;
     private String status;
@@ -28,5 +31,13 @@ public class Paycanceld extends AbstractEvent {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Long getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(Long requestId) {
+        this.requestId = requestId;
     }
 }

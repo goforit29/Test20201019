@@ -14,10 +14,10 @@ public class Payment {
         this.id = id;
     }
     public Long getRequestId() {
-        return id;
+        return requestId;
     }
     public void setRequestId(Long requestId) {
-        this.requestId = id;
+        this.requestId = requestId;
     }
     public Long getCustomerId() {
         return customerId;

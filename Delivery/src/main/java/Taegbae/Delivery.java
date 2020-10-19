@@ -16,7 +16,7 @@ public class Delivery {
     private String courierName;
 
     @PostPersist
-    public void onPostPersist(){
+    public void onPostUpdate(){
         Checked checked = new Checked();
         BeanUtils.copyProperties(this, checked);
         checked.publishAfterCommit();

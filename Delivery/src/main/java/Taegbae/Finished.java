@@ -4,7 +4,7 @@ public class Finished extends AbstractEvent {
 
     private Long id;
     private Long requestId;
-    private String status;
+    private String status ="Finished";
     private String courierName;
 
     public Long getId() {

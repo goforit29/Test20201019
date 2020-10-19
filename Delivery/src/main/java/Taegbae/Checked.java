@@ -4,7 +4,7 @@ public class Checked extends AbstractEvent {
 
     private Long id;
     private Long requestId;
-    private String status;
+    private String status ="Checked";
     private String courierName;
 
     public Long getId() {
